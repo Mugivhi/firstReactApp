@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 
+import AddItem from './components/addItem';
+import Leftisite from './components/leftisite';
+import Rightsite from './components/rightsite';
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className='holder'>
+      <div className='arrow-left'>
+        <FaAngleLeft />
+      </div>
+      <div className='arrow-right'>
+        <FaAngleRight />
+      </div>
+      <div className='center-class'>
+        <AddItem/>
+      </div>
+      <div className='right-class'>
+        <Rightsite/>
+      </div>
+      <div className='left-class'>
+        <Leftisite/>
+      </div>
     </div>
+    </div>
+    
   );
 }
 
